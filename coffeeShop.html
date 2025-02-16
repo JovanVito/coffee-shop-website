@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Coffee Shop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
+    <div class="container mx-auto p-6">
+        <header class="flex justify-between items-center py-6">
+            <h1 class="text-3xl font-bold">Data Coffee Shop</h1>
+            <button id="dark-mode-toggle" class="p-2 bg-gray-800 text-white rounded-full">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+        
+        <section class="mb-6">
+            <input type="text" id="search" placeholder="Cari coffee shop..." 
+                class="w-full p-3 border rounded-lg text-gray-900">
+        </section>
+        
+        <section>
+            <table class="w-full bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                <thead class="bg-gray-800 text-white">
+                    <tr>
+                        <th class="p-3 cursor-pointer" onclick="sortTable(0)">Nama ⬍</th>
+                        <th class="p-3 cursor-pointer" onclick="sortTable(1)">Lokasi ⬍</th>
+                        <th class="p-3 cursor-pointer" onclick="sortTable(2)">Rating ⬍</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" class="text-center">
+                    <tr class="hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <td class="p-3">Kopi Kenangan</td>
+                        <td class="p-3">Jakarta</td>
+                        <td class="p-3">4.5</td>
+                    </tr>
+                    <tr class="hover:bg-gray-200 dark:hover:bg-gray-700">
+                        <td class="p-3">Janji Jiwa</td>
+                        <td class="p-3">Bandung</td>
+                        <td class="p-3">4.2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+    <script>
+        document.getElementById("dark-mode-toggle").addEventListener("click", function () {
+            document.documentElement.classList.toggle("dark");
+        });
+    </script>
+</body>
+</html>
