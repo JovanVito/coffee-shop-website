@@ -1,0 +1,159 @@
+/* Gaya Umum */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(to right, #232526, #414345);
+    color: white;
+}
+
+.dark-mode header {
+    background-color: #2b2b2b;
+}
+
+.dark-mode .table-container {
+    background: #333;
+    color: white;
+}
+
+.dark-mode table {
+    background: #444;
+}
+
+.dark-mode th {
+    background: #555;
+}
+
+/* Header */
+header {
+    background-color: #3e2723;
+    color: white;
+    padding: 20px;
+}
+
+/* Switch Dark Mode */
+.switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Bagian utama */
+.intro {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro:hover {
+    transform: scale(1.05);
+}
+
+/* Tombol */
+.btn {
+    background-color: #795548;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #5d4037;
+    transform: scale(1.1);
+}
+
+/* Tabel */
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #795548;
+    color: white;
+    cursor: pointer;
+}
+
+th:hover {
+    background-color: #5d4037;
+}
+
+/* Input pencarian */
+#search {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
